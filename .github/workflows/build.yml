@@ -1,0 +1,18 @@
+name: tp workflow
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup PHP with PECL extension
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: imagick, swoole
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Listing files
+      run: ls -al
+    - name: install dependance
+      run: composer install
+        
