@@ -1,3 +1,5 @@
+env:
+  VARIABLE_NAME: 'Ma variable de test'
 name: Mon premier workflow
 on:
   push:
@@ -14,3 +16,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Listing files
         run: ls -al
+      - name: display variable
+        run: echo ${{ env.VARIABLE_NAME }}
