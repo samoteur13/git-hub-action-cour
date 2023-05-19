@@ -18,3 +18,7 @@ jobs:
         run: ls -al
       - name: display variable
         run: echo ${{ env.VARIABLE_NAME }}
+      - name: Use a Secret
+        env:
+          SUPER_SECRET: ${{ secrets.SECRET_NAME }}
+          run: echo $SUPER_SECRET
