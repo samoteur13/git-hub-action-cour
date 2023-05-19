@@ -22,4 +22,3 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SECRET_NAME }}
         run: echo $SUPER_SECRET
-
