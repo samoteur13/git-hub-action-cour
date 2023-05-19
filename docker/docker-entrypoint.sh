@@ -38,6 +38,6 @@ fi
 
 chmod -R 777 ./
 
-symfony console doctrine:migration:migrate -n --allow-no-migration
+# symfony console doctrine:migration:migrate -n --allow-no-migration
 
 exec docker-php-entrypoint "$@"
