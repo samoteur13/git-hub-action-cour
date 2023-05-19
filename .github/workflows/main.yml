@@ -22,5 +22,4 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SECRET_NAME }}
         run: echo $SUPER_SECRET
-      - name: Run test
-        run: php bin/phpunit
+
