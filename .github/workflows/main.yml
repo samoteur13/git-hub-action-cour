@@ -12,3 +12,7 @@ jobs:
     steps:
       - name: Exécuter une action
         uses: actions/hello-world-docker-action@v1
+      - name: Add new directory
+        run: mkdir new_directory
+      - name: List files
+        run: ls -al
